@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gucci Osteria Seoul</title>
+    <link rel="stylesheet" href="css/Gucci Osteria Seoul.css">
+
+    <script>
+        window.onload = function () {
+            // 상단 바 표시/숨기기
+            const header = document.querySelector(".header");
+            const topBar = document.querySelector(".top-bar");
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > header.offsetHeight) {
+                    if (!topBar.classList.contains("visible")) {
+                        topBar.classList.add("visible");
+                    }
+                } else {
+                    if (topBar.classList.contains("visible")) {
+                        topBar.classList.remove("visible");
+                    }
+                }
+            });
+
+            let menuBtn = document.querySelector('.menu_btn');
+            let allMenu = document.querySelector('.nav02');
+
+            menuBtn.addEventListener('click', () => {
+                allMenu.classList.toggle('active');
+            });
+
+
+            // 클릭 앤 드래그 슬라이드
+            const itemWrap = document.querySelector(".item_wrap");
+            let isDragging = false;
+            let startX;
+            let scrollLeft;
+
+            itemWrap.addEventListener("mousedown", (e) => {
+                isDragging = true;
+                startX = e.pageX - itemWrap.offsetLeft;
+                scrollLeft = itemWrap.scrollLeft;
+            });
+            itemWrap.addEventListener("mouseleave", () => {
+                isDragging = false;
+            });
+            itemWrap.addEventListener("mouseup", () => {
+                isDragging = false;
+            });
+            itemWrap.addEventListener("mousemove", (e) => {
+                if (!isDragging) return;
+                e.preventDefault();
+                const x = e.pageX - itemWrap.offsetLeft;
+                const walk = (x - startX) * 2; // 스크롤 속도 조정
+                itemWrap.scrollLeft = scrollLeft - walk;
+            });
+        };
+    </script>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="img/logo.png" alt="logo">
+                </a>
+            </h1><!-- .logo end -->
+
+            <nav class="nav">
+                <ul class="gnb">
+                    <li>
+                        <a href="#" class="depth-01">Our Story</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="depth-01">Shop</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="depth-01">Menu</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="depth-01">Contact</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="depth-01">한국어 &nbsp; </a>
+                        <img src="img/Vector.png" alt="">
+                        <ul class="depth-02">
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">日本語</a></li>
+                            <li><a href="#">中文(简体字)</a></li>
+                        </ul>
+                    </li>
+                </ul><!-- .gnb end -->
+            </nav><!-- .nav end -->
+
+            <a href="#" class="btn">
+                <span class="text">Reservation</span>
+</a>
+        </div><!-- .inner end -->
+    </header><!-- .header end -->
+
+    <div class="top-bar">
+        <div class="inner">
+
+            <button class="menu_btn">
+                <img src="img/btn.png" alt="">
+            </button><!-- .main-btn end -->
+
+            <nav class="nav02">
+                <ul class="gnb">
+                    <li>Home</li>
+                    <li>Our Story</li>
+                    <li>Shop</li>
+                    <li>Menu</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+
+            <h2 class="logo">
+                <a href="#">
+                    <img src="img/logo.png" alt="logo">
+                </a>
+            </h2>
+
+            <nav class="util">
+                <ul class="util-menu">
+                    <li><a href="#"><img src="img/globe.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/reservation.png" alt=""></a></li>
+                </ul><!-- .util-menu end -->
+            </nav><!-- .util end -->
+        </div><!-- .inner end -->
+    </div><!-- .top-bar end -->
+
+    <main class="main">
+        <section class="main_visual">
+            <img src="img/구찌오스테리아.jpg" alt="">
+        </section><!-- .main_visual end -->
+    </main><!-- .main end -->
+
+    <section class="section-01">
+        <div class="title">
+            <h3>Signiture Dishes</h3>
+            <p>이탈리아의 맛과 한국의 매력이 어우러진 제철 테이스팅 메뉴를 경험해보세요.</p>
+            <a href="#">view more</a>
+        </div><!-- .title end -->
+
+        <div class="item_wrap">
+            <div class="item">
+                <div class="image-box">
+                    <img src="img/HTYM3651-scaled.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p>
+                        <strong>In Fondo Al Mar</strong><br />
+                        성게, 캐비아, 해초, 유자
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="image-box">
+                    <img src="img/Gucci_Osteria_Seoul-Chef-Dish_2.jpeg" alt="">
+                </div>
+                <div class="text">
+                    <p>
+                        <strong>Farinata</strong><br />
+                        메밀, 스트라치아텔라, 방울토마토, 계절 샐러드
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="image-box">
+                    <img src="img/HTYM3974-scaled.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p>
+                        <strong>Alito Di Zuccar</strong><br />
+                        카펠라치, 늙은호박, 칸투치, 호박씨 오일
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="image-box">
+                    <img src="img/HTYM3944-scaled.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p>
+                        <strong>Tonno e Cipolla</strong><br />
+                        참치 등살, 참치 뱃살, 적양파, 그린올리브
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="image-box">
+                    <img src="img/HTYM4199-scaled.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p>
+                        <strong>Panettone</strong><br />
+                        파네토네 젤라또, 마르살라 자바이오네, 황금향
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="image-box">
+                    <img src="img/HTYM4123-scaled.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p>
+                        <strong>Foresta Bianca</strong><br />
+                        초코렛, 아마레나 체리, 흑임자, 카카오
+                    </p>
+                </div>
+            </div>
+
+        </div><!-- .item_wrap -->
+    </section> <!-- .section-01 end -->
+
+    <section class="section-02">
+        <div class="inner">
+            <div class="title">
+                <h3>Our Story</h3>
+                <p>구찌 오스테리아 서울은 내면의 감각을 자극하는 새롭고 품격 있는 미식 경험을 선사합니다.</p>
+                <a href="#">view more</a>
+            </div><!-- .title end -->
+
+            <div class="item_wrap">
+                <div class="item">
+                    <div class="image-box">
+                        <img src="img/Gucci_Osteria_Seoul-Home-About.jpeg" alt="">
+                    </div><!-- .image-box end -->
+                    <div class="text">
+                        <p>서울의 중심부에 자리한 컨템포러리 레스토랑<br />
+                            <strong>구찌 오스테리아 서울</strong>은<br />
+                            가장 전통적이면서도 대표적인 이탈리아 퀴진에<br />
+                            한국의 고유한 식재료와 조리 기법을 더해<br />
+                            한 층 더 새로워진 미식 경험을 선사합니다.
+                        </p>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <div class="image-box">
+                        <img src="img/Chef_1080x1350.jpg" alt="">
+                    </div><!-- .image-box end -->
+                    <div class="text">
+                        <p>
+                            <strong>전형규</strong><br />
+                            구찌 오스테리아 서울 셰프<br />
+                            <br />
+                            <span>전형규 셰프가 한국적 시각을 담아<br />
+                                혁신적이고 재치 있게 재해석해 선보이는<br />
+                                정통 이탈리아 퀴진을 만나보세요.</span>
+                        </p>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+
+            </div><!-- .item_wrap end -->
+        </div><!-- .inner end -->
+    </section><!-- .section-02 end -->
+
+    <section class="section-03">
+        <div class="title">
+            <h3>Special Experience</h3>
+            <p>구찌 오스테리아 서울에서 열리는 특별한 미식 경험에 빠져보세요.</p>
+            <a href="#">view more</a>
+        </div><!-- .title end -->
+
+        <div class="item_wrap">
+            <div class="item">
+                <div class="image-box">
+                    <img src="img/Gucci_Osteria_Seoul-Experience-Valentines_Day-Hero.jpg" alt="">
+                </div><!-- .image-box end -->
+                <div class="text">
+                    <h6>발렌타인 데이 런치 & 디너</h6>
+                    <p>구찌 오스테리아 서울의 세련미와 JL 디저트 바의 저스틴 리 셰프가 선보이는 독창적인 디저트가 만나는 특별한 저녁을 경험해보세요.</p>
+                    <a href="#">예약하기</a>
+                </div><!-- .text end -->
+            </div><!-- .item end -->
+
+            <div class="item">
+                <div class="image-box">
+                    <img src="img/Gucci_Osteria_Seoul-Caviar_Experience-Hero.jpg" alt="">
+                </div><!-- .image-box end -->
+                <div class="text">
+                    <h6>캐비아와 함께하는 미식 경험</h6>
+                    <p>이번 다이닝 이벤트에서 제공되는 캐비아는 세계에서 가장 윤리적으로 캐비아를 생산하는 브랜드로 손꼽히는 스투리아
+                        캐비아로 ...<!--  준비된 와인들과 완벽한 페어링을 선사합니다. --></p>
+                    <span>Sold Out</span>
+                </div><!-- .text end -->
+            </div><!-- .item end -->
+
+            <div class="item">
+                <div class="image-box">
+                    <img src="img/A7R0492.jpeg" alt="">
+                </div><!-- .image-box end -->
+                <div class="text">
+                    <h6>구찌 오스테리아 컬래버레이션</h6>
+                    <p>전형규 셰프가 한국 풍미의 여정을 담아낸 제주 돼지, 도쿄의 안토니오 라코비엘로 셰프가 일본과 이탈리아 식문화를 조화롭게
+                        ...<!-- 표현한 ‘카치오 에 페페’ 그리고 피렌체의 공동 총괄 셰프인 카리메 로페즈와 타카히코 콘도 셰프의 달콤한 ‘바나나 스플릿’ 메뉴를 경험하실 수 있습니다. -->
+                    </p>
+                    <span>Sold Out</span>
+                </div><!-- .text end -->
+            </div><!-- .item end -->
+        </div>
+    </section><!-- .section-03 end -->
+
+    <footer class="footer">
+        <h2 class="logo">
+            <img src="img/logo-green.png" alt="">
+        </h2>
+
+        <div class="item_wrap">
+            <div class="item">
+                <h6>Address</h6>
+                <ul class="cont">
+                    <li>서울특별시 용산구 이태원로 223 <br />
+                        GUCCI OSTERIA SEOUL, 6층</li>
+                </ul>
+            </div><!-- .item end -->
+            <div class="item">
+                <h6>Contact</h6>
+                <ul class="cont">
+                    <li>T. +827047320477</li>
+                    <li>M. gucciosteria.kr@gucci.com</li>
+                </ul>
+            </div><!-- .item end -->
+            <div class="item">
+                <h6>Follow us</h6>
+                <ul class="cont">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div><!-- .item end -->
+        </div><!-- .item_wrap end -->
+
+        <nav class="nav">
+            <ul class="gnb">
+                <li>
+                    <div class="box">
+                        <a href="#" class="depth-01">약관 및 정책</a>
+                        <img src="img/Vector.png" alt="">
+                    </div>
+                    <ul class="depth-02">
+                        <li><a href="#">약관 및 정책</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">접근성</a></li>
+                    </ul>
+                </li>
+            </ul><!-- .gnb end -->
+        </nav><!-- .nav end -->
+    </footer>
+
+</body>
+
+</html>

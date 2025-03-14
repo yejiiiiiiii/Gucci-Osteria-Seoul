@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'SourceHanSerifKR';
+    src: url('SourceHanSerifKR-Regular-Alphabetic.woff2') format('woff2'),
+        url('SourceHanSerifKR-Regular-Alphabetic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SourceHanSerifKR';
+    src: url('SourceHanSerifKR-Light-Alphabetic.woff2') format('woff2'),
+        url('SourceHanSerifKR-Light-Alphabetic.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SourceHanSerifKR';
+    src: url('SourceHanSerifKR-Medium-Alphabetic.woff2') format('woff2'),
+        url('SourceHanSerifKR-Medium-Alphabetic.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SourceHanSerifKR';
+    src: url('SourceHanSerifKR-ExtraLight-Alphabetic.woff2') format('woff2'),
+        url('SourceHanSerifKR-ExtraLight-Alphabetic.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SourceHanSerifKR';
+    src: url('SourceHanSerifKR-SemiBold-Alphabetic.woff2') format('woff2'),
+        url('SourceHanSerifKR-SemiBold-Alphabetic.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SourceHanSerifKR';
+    src: url('SourceHanSerifKR-Bold-Alphabetic.woff2') format('woff2'),
+        url('SourceHanSerifKR-Bold-Alphabetic.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SourceHanSerifKR';
+    src: url('SourceHanSerifKR-Heavy-Alphabetic.woff2') format('woff2'),
+        url('SourceHanSerifKR-Heavy-Alphabetic.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
